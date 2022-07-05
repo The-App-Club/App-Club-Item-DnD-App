@@ -1,0 +1,97 @@
+.root {
+    &.is-dragging {
+        .title-wrapper:hover {
+            background-color: white;
+        }
+    }
+    outline: none;
+}
+
+.node {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    outline: none;
+
+    &.animateIn {
+        animation-name: animateIn;
+        animation-timing-function: ease;
+        animation-duration: .3s;
+    }
+
+    @keyframes animateIn {
+        from {
+            opacity: .5;
+            transform: translate3d(0, -5px, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .icon {
+        align-self: center;
+        transition: transform 0.2s ease;
+        transform-origin: center;
+        color: #556677;
+        cursor: pointer;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 24px;
+        flex-shrink: 0;
+    }
+
+    .iconExpanded {
+        transform: rotateZ(90deg);
+    }
+
+    .iconLoading {
+        color: #112233;
+        animation-name: spin;
+        animation-duration: 0.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .titleWrapper {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0 6px 0 6px;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        flex-shrink: 0;
+
+        &:hover {
+            background-color: rgb(211, 238, 238);
+        }
+
+        &.selected {
+            background-color: rgb(122, 226, 226);
+        }
+
+        &.draggedOver {
+            background-color: greenyellow;
+            border: 1px solid green;
+            border-radius: 0;
+        }
+
+        &.dragging {
+            background-color: white;
+        }
+    }
+}

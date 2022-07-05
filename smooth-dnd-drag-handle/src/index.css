@@ -1,0 +1,38 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.simple-page {
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 500px;
+}
+.draggable-item {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  outline: 0;
+  text-align: center;
+}
+.column-drag-handle {
+  cursor: move;
+  padding: 5px;
+}
+.smooth-dnd-container {
+  position: relative;
+  min-height: 30px;
+  min-width: 30px;
+}
+.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+  overflow: hidden;
+  display: block;
+}

@@ -1,0 +1,37 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.drop-zone {
+  display: flex;
+  flex-wrap: wrap;
+}
+.drop-zone-container {
+  background-color: #80bdff;
+  border: 5px solid #348;
+  border-radius: 100px;
+  height: 100px;
+  margin: 20px;
+  transition: background-color 0.2s ease;
+  width: 100px;
+}
+.drop-zone-draggable {
+  background-color: cornflowerblue;
+  border: 2px solid #348;
+  border-radius: 100px;
+  height: 80px;
+  margin: 10px;
+  width: 80px;
+}
+.smooth-dnd-container {
+  min-height: 30px;
+  min-width: 30px;
+  position: relative;
+}
+.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+  display: block;
+  overflow: hidden;
+}

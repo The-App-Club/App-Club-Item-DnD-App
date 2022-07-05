@@ -1,0 +1,31 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.draggable-item-horizontal {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  display: block;
+  height: 300px;
+  line-height: 100px;
+  margin-right: 4px;
+  outline: 0;
+  padding: 10px;
+  text-align: center;
+}
+.smooth-dnd-container {
+  min-height: 30px;
+  min-width: 30px;
+  position: relative;
+}
+.smooth-dnd-container.horizontal {
+  display: table;
+}
+.smooth-dnd-container.horizontal > .smooth-dnd-draggable-wrapper {
+  display: table-cell;
+  height: 100%;
+  vertical-align: top;
+}

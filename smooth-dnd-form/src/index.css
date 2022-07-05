@@ -1,0 +1,87 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Oxygen', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+.form-demo {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 650px;
+}
+.form {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.08), 0px 3px 3px rgba(0, 0, 0, 0.08);
+  flex: 3 1;
+}
+.form-line {
+  background-color: #f8f9fa;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: move;
+  padding: 20px 30px;
+  transition: all 0.3s ease;
+  transition-property: border-color, background-color;
+}
+.form-submit-button {
+  background-color: cornflowerblue;
+  border: 0;
+  color: #eee;
+  cursor: pointer;
+  height: 40px;
+  vertical-align: middle;
+  width: 100%;
+}
+.label {
+  margin-bottom: 5px;
+}
+.field {
+  cursor: auto;
+}
+.field input,
+.field textarea,
+.field select {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+.field input[type='radio'],
+.field input[type='checkbox'] {
+  width: auto;
+}
+.field input:focus,
+textarea:focus {
+  border: 1px solid #80bdff;
+  box-shadow: 0 0 3px 0px #80bdff;
+}
+.field-group input {
+  margin-right: 2%;
+  width: 49%;
+}
+input:last-child {
+  margin-right: 0;
+}
+.smooth-dnd-container {
+  position: relative;
+  min-height: 30px;
+  min-width: 30px;
+}
+.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+  overflow: hidden;
+  display: block;
+}
+.smooth-dnd-draggable-wrapper {
+  box-sizing: border-box;
+}

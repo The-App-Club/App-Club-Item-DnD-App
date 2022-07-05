@@ -1,0 +1,41 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.board {
+  border: 1px solid #000;
+  height: 800px;
+  width: 800px;
+}
+.row {
+  display: flex;
+}
+.square {
+  background-color: #ffce9e;
+  height: 100px;
+  width: 100px;
+}
+.square.black {
+  background-color: #d18b47;
+}
+.piece {
+  cursor: pointer;
+  font-size: 60px;
+  height: 100px;
+  padding-left: 20px;
+  padding-top: 10px;
+  transition: opacity 0.2s ease;
+  width: 100px;
+}
+.smooth-dnd-container {
+  position: relative;
+  min-height: 30px;
+  min-width: 30px;
+}
+.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+  overflow: hidden;
+  display: block;
+}

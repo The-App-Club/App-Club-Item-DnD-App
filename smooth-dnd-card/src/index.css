@@ -1,0 +1,59 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.card-scene {
+  padding: 50px;
+}
+.card-container {
+  background-color: #f3f3f3;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+  margin: 5px;
+  margin-right: 45px;
+  padding: 10px;
+  width: 320px;
+}
+.card {
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+  margin: 5px;
+  padding: 10px;
+}
+.card-column-header {
+  font-size: 18px;
+}
+.column-drag-handle {
+  cursor: move;
+  padding: 5px;
+}
+.smooth-dnd-container {
+  min-height: 30px;
+  min-width: 30px;
+  position: relative;
+}
+.smooth-dnd-container.horizontal {
+  display: table;
+}
+.smooth-dnd-container.horizontal > .smooth-dnd-draggable-wrapper {
+  display: table-cell;
+  height: 100%;
+  vertical-align: top;
+}
+.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+  display: block;
+  overflow: hidden;
+}
+.drop-preview {
+  background-color: rgba(150, 150, 200, 0.1);
+  border: 1px dashed #abc;
+  margin: 5px;
+}
+
+.cards-drop-preview {
+  background-color: rgba(150, 150, 200, 0.1);
+  border: 1px dashed #abc;
+  margin: 5px 45px 5px 5px;
+}

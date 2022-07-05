@@ -1,0 +1,82 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.workspace {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.draggable-cropper-resizable-item {
+  background: transparent;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  cursor: move;
+  background-image: url(https://media.giphy.com/media/1CRbewpGZtdEQ/giphy.gif);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.draggable-cropper-resizer-item-list {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #a7c0db;
+  box-sizing: border-box;
+}
+.draggable-cropper-resizer-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #a7c0db;
+  border: 3px solid #a7c0db;
+  position: absolute;
+}
+.draggable-cropper-top-left {
+  left: -3px;
+  top: -3px;
+  cursor: nwse-resize;
+}
+.draggable-cropper-edge-top {
+  left: 45px;
+  top: -3px;
+  cursor: ns-resize;
+}
+.draggable-cropper-top-right {
+  right: -3px;
+  top: -3px;
+  cursor: nesw-resize;
+}
+.draggable-cropper-bottom-left {
+  left: -3px;
+  bottom: -3px;
+  cursor: nesw-resize;
+}
+.draggable-cropper-edge-bottom {
+  left: 45px;
+  bottom: -3px;
+  cursor: ns-resize;
+}
+.draggable-cropper-bottom-right {
+  right: -3px;
+  bottom: -3px;
+  cursor: nwse-resize;
+}
+.draggable-cropper-edge-left {
+  left: -3px;
+  bottom: 45px;
+  cursor: ew-resize;
+}
+.draggable-cropper-edge-right {
+  right: -3px;
+  bottom: 45px;
+  cursor: ew-resize;
+}

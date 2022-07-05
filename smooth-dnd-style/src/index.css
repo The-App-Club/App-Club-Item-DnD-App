@@ -1,0 +1,48 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.simple-page {
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 500px;
+}
+.draggable-item {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  outline: 0;
+  text-align: center;
+}
+.smooth-dnd-container {
+  min-height: 30px;
+  min-width: 30px;
+  position: relative;
+}
+.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+  display: block;
+  overflow: hidden;
+}
+
+.opacity-ghost {
+  background-color: #eda264;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+  cursor: ns-resize;
+  opacity: 0.8;
+  transition: all 0.18s ease;
+}
+
+.opacity-ghost-drop {
+  background-color: white;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0);
+  opacity: 1;
+}
