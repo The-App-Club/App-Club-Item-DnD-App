@@ -1,0 +1,4 @@
+- Reference
+  - [nice demo](https://github.com/kawamou/kanban-board)
+  - [nice blog](https://qiita.com/kawamou/items/820457ad139985a485be)
+  - [nice tool](https://lorem-jpsum.vercel.app/?source=ginga-tetsudo&format=plain&sentence_count=5)
