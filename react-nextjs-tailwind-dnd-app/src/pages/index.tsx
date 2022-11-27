@@ -5,6 +5,11 @@ import {cx, css} from '@emotion/css';
 
 export default function Home() {
   return (
+    <div className="max-w-full w-full">
+      <Example />
+    </div>
+  );
+  return (
     <div className="max-w-[30rem] w-full mx-auto mt-4">
       <Example />
     </div>

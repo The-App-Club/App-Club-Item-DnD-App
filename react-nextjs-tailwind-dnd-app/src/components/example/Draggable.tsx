@@ -9,7 +9,7 @@ export interface CardProps {
   id: any;
   children: React.ReactNode;
   index: number;
-  moveCard: (dragIndex: number, hoverIndex: number) => void;
+  move: (dragIndex: number, hoverIndex: number) => void;
 }
 
 interface DragItem {
@@ -18,7 +18,7 @@ interface DragItem {
   type: string;
 }
 
-export const Draggable: FC<CardProps> = ({id, children, index, moveCard}) => {
+export const Draggable: FC<CardProps> = ({id, children, index, move}) => {
   const ref = useRef<HTMLDivElement>(null);
   const [{handlerId}, drop] = useDrop<
     DragItem,
@@ -61,17 +61,17 @@ export const Draggable: FC<CardProps> = ({id, children, index, moveCard}) => {
       // When dragging upwards, only move when the cursor is above 50%
 
       // Dragging downwards
-      if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-        return;
-      }
+      // if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
+      //   return;
+      // }
 
-      // Dragging upwards
-      if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
-        return;
-      }
+      // // Dragging upwards
+      // if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
+      //   return;
+      // }
 
       // Time to actually perform the action
-      moveCard(dragIndex, hoverIndex);
+      move(dragIndex, hoverIndex);
 
       // Note: we're mutating the monitor item here!
       // Generally it's better to avoid mutations,
@@ -97,7 +97,7 @@ export const Draggable: FC<CardProps> = ({id, children, index, moveCard}) => {
     <div
       ref={ref}
       style={{opacity}}
-      className={`bg-white cursor-move`}
+      className={`bg-white cursor-move w-full`}
       data-handler-id={handlerId}
     >
       {children}

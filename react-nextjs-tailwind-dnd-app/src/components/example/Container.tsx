@@ -46,7 +46,7 @@ export const Container: FC = () => {
       },
     ]);
 
-    const moveCard = useCallback((dragIndex: number, hoverIndex: number) => {
+    const move = useCallback((dragIndex: number, hoverIndex: number) => {
       setCards((prevCards: Item[]) =>
         update(prevCards, {
           $splice: [
@@ -64,12 +64,7 @@ export const Container: FC = () => {
         >
           {cards.map((card: {id: number; text: string}, index: number) => {
             return (
-              <Draggable
-                key={card.id}
-                index={index}
-                id={card.id}
-                moveCard={moveCard}
-              >
+              <Draggable key={card.id} index={index} id={card.id} move={move}>
                 <div className="min-h-[10rem] border-2 p-2">
                   <h3 className="font-bold text-lg">{card.text}</h3>
                   <p className="break-words line-clamp-5 font-noto">
