@@ -1,15 +1,8 @@
-/** @jsxImportSource @emotion/react */
-import {css} from '@emotion/react';
-
 import update from 'immutability-helper';
 import type {FC} from 'react';
 import {useCallback, useState} from 'react';
 
-import {Card} from './Card';
-
-const style = {
-  width: 400,
-};
+import {Draggable} from './Draggable';
 
 export interface Item {
   id: number;
@@ -64,25 +57,28 @@ export const Container: FC = () => {
       );
     }, []);
 
-    const renderCard = useCallback(
-      (card: {id: number; text: string}, index: number) => {
-        return (
-          <Card
-            key={card.id}
-            index={index}
-            id={card.id}
-            text={card.text}
-            moveCard={moveCard}
-          />
-        );
-      },
-      []
-    );
-
     return (
       <>
-        <div style={style} className={`border-2 p-2`}>
-          {cards.map((card, i) => renderCard(card, i))}
+        <div
+          className={`max-w-[20rem] w-full border-2 p-2 flex flex-col gap-2`}
+        >
+          {cards.map((card: {id: number; text: string}, index: number) => {
+            return (
+              <Draggable
+                key={card.id}
+                index={index}
+                id={card.id}
+                moveCard={moveCard}
+              >
+                <div className="min-h-[10rem] border-2 p-2">
+                  <h3 className="font-bold text-lg">{card.text}</h3>
+                  <p className="break-words line-clamp-5 font-noto">
+                    ジョバンニもカムパネルラもいっしょに行けるのだああぼくはそのひとのために、僕のお母さんのために祈っているのでした。そしてカムパネルラもまた、そんなにして何か思い出そうとして戻ろうとしましたら、向こうの鼠いろの切符を出しました。さそりは一生けん命で甲板の格子になったみじかい芝草の中にかくれたようでした。それはだんだんはっきりして、そっちの方へ歩き出しました。そしてこれからなんでもいつでも私のとこへ行くんですジョバンニは、走ってその渚に行ってすっかりとまりました。
+                  </p>
+                </div>
+              </Draggable>
+            );
+          })}
         </div>
       </>
     );
