@@ -13,7 +13,7 @@ export interface ContainerState {
   cards: Item[];
 }
 
-export const Container: FC = () => {
+export const CardContainer: FC = () => {
   {
     const [cards, setCards] = useState([
       {

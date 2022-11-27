@@ -4,7 +4,7 @@ import {FiPlus} from 'react-icons/fi';
 import Card from './Card';
 import Spacer from './Spacer';
 
-const Container = () => {
+const CardContainer = () => {
   return (
     <div
       className={cx(
@@ -31,4 +31,4 @@ const Container = () => {
   );
 };
 
-export default Container;
+export default CardContainer;

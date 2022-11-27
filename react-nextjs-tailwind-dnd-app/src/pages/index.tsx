@@ -1,4 +1,4 @@
-import Container from '@/components/Container';
+import CardContainer from '@/components/CardContainer';
 import ContainerSkelton from '@/components/ContainerSkelton';
 import Example from '@/components/example';
 import {cx, css} from '@emotion/css';
@@ -26,9 +26,9 @@ export default function Home() {
         `
       )}
     >
-      <Container />
-      <Container />
-      <Container />
+      <CardContainer />
+      <CardContainer />
+      <CardContainer />
       <ContainerSkelton />
     </div>
   );
