@@ -1,8 +1,11 @@
 import Container from '@/components/Container';
 import ContainerSkelton from '@/components/ContainerSkelton';
+import Example from '@/components/example';
 import {cx, css} from '@emotion/css';
 
 export default function Home() {
+  return <Example />;
+
   return (
     <div
       className={cx(
